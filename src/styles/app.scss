@@ -1,8 +1,8 @@
+@import "./player.scss";
+@import "./song.scss";
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
-@import "./player";
-@import "./song";
