@@ -24,7 +24,7 @@
 
 .time-control input {
   width: 100%;
-  padding: 1rem 2rem;
+  padding: 1rem 0rem;
 }
 
 .time-control p {
@@ -66,10 +66,27 @@
           justify-content: center;
 }
 
+.song-container img {
+  width: 20%;
+  border-radius: 50%;
+}
+
+.song-container h2 {
+  padding: 3rem 1rem 1rem 1rem;
+}
+
+.song-container h3 {
+  font-size: 16px;
+}
+
 * {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+h1, h2, h3 {
+  color: #363636;
 }
 /*# sourceMappingURL=app.css.map */
