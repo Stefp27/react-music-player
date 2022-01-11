@@ -34,6 +34,12 @@ const Player = ( {currentSong, isPlaying, setIsPlaying}) => {
     setSongInfo({...songInfo, currentTime: e.target.value});
   }
 
+  const autoPlayHandler = () => {
+    if (isPlaying) {
+      audioRef.current.play();
+    }
+  }
+
   //State
   const [songInfo, setSongInfo] = useState ({
     currentTime: 0,
@@ -58,6 +64,7 @@ const Player = ( {currentSong, isPlaying, setIsPlaying}) => {
         <FontAwesomeIcon className="skip-forward" size ="2x" icon={faAngleRight} />
       </div>
       <audio 
+        onLoadedData={autoPlayHandler}
         onTimeUpdate={timeUpdateHandler}
         onLoadedMetadata={timeUpdateHandler}
         ref={audioRef} 
