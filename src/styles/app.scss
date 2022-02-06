@@ -1,6 +1,7 @@
 @import "./player.scss";
 @import "./song.scss";
 @import "./library";
+@import "./nav";
 
 * {
   margin: 0;
@@ -14,4 +15,12 @@ body {
 
 h1,h2,h3 {
   color: rgb(54,54,54);
+}
+
+.App {
+  transition: all 0.5s ease;
+}
+
+.library-active {
+  margin-left: 30%;
 }
