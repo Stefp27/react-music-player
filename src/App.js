@@ -5,7 +5,7 @@ import Player from "./components/Player";
 import data from "./components/util";
 import Library from "./components/Library";
 import Nav from "./components/Nav";
-import { library } from "@fortawesome/fontawesome-svg-core";
+
 
 function App() {
   const [songs, setSongs] = useState(data());

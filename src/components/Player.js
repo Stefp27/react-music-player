@@ -3,8 +3,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay, faAngleLeft, faAngleRight, faPause } from "@fortawesome/free-solid-svg-icons";
 
 const Player = ( {currentSong, isPlaying, setIsPlaying, songs, setCurrentSong, setSongs}) => {
-  //Ref
-  const audioRef = useRef(null);
 
   //Use Effect
   useEffect(() => {
@@ -22,7 +20,12 @@ const Player = ( {currentSong, isPlaying, setIsPlaying, songs, setCurrentSong, s
         }
     });
     setSongs(newSongs);
-  }, [currentSong])
+  }, 
+ // eslint-disable-next-line react-hooks/exhaustive-deps
+  [currentSong])
+
+  //Ref
+  const audioRef = useRef(null);
 
   //Event Handlers
   const playSongHandler = () => {
@@ -55,14 +58,14 @@ const Player = ( {currentSong, isPlaying, setIsPlaying, songs, setCurrentSong, s
   const skipTrackHandler = (direction) => {
     let currentIndex = songs.findIndex((song) => song.id === currentSong.id);
     if (direction === "skip-forward") {
-      setCurrentSong(songs [(currentIndex + 1) % songs.length]);
+      setCurrentSong(songs[(currentIndex + 1) % songs.length]);
     }
     if (direction === "skip-back") {
       if ((currentIndex -1) % songs.length === -1) {
-        setCurrentSong(songs [songs.length -1]);
+        setCurrentSong(songs[songs.length -1]);
         return;
       }
-      setCurrentSong(songs [(currentIndex - 1) % songs.length]);
+      setCurrentSong(songs[(currentIndex - 1) % songs.length]);
     }
   }
 
