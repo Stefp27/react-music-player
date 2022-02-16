@@ -31,7 +31,7 @@ function App() {
         setSongs={setSongs} 
         libraryStatus={libraryStatus} />
       <footer> 
-        <a href="https://github.com/Stefp27/react-music-player" target="_blank" class = "open-source-link">Project coded</a>
+        <a href="https://github.com/Stefp27/react-music-player" target="_blank" rel="noreferrer" class = "open-source-link">Project coded</a>
         <span> by Stefania Popescu</span>
       </footer>
     </div>
