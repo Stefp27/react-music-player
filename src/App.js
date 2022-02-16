@@ -7,6 +7,7 @@ import Library from "./components/Library";
 import Nav from "./components/Nav";
 
 
+
 function App() {
   const [songs, setSongs] = useState(data());
   const [currentSong, setCurrentSong] = useState(songs[0]);
@@ -29,6 +30,10 @@ function App() {
         setCurrentSong={setCurrentSong}
         setSongs={setSongs} 
         libraryStatus={libraryStatus} />
+      <footer> 
+        <a href="https://github.com/Stefp27/react-music-player" target="_blank" class = "open-source-link">Project coded</a>
+        <span> by Stefania Popescu</span>
+      </footer>
     </div>
   );
 }
