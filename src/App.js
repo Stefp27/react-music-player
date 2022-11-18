@@ -32,7 +32,7 @@ function App() {
         libraryStatus={libraryStatus} />
       <footer> 
         <a href="https://github.com/Stefp27/react-music-player" target="_blank" rel="noreferrer" class = "open-source-link">Project coded</a>
-        <span> by Stefania Popescu</span>
+        <span> by Stef Popescu</span>
       </footer>
     </div>
   );
